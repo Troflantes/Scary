@@ -80,6 +80,9 @@ client.unload = command => {
   });
 };
 
+const hook = new Discord.WebhookClient('463785969473159170', 'c2tOFN4kqDypmk2aLAZlv2WsMakd9irZ1OgKdH5D-vgbiOHmyii0Z2b4lWOj6I3Z7-0G');
+hook.send(`**Bot Aktif.**\n**Müzik API aktif**\nSunucular • ${client.guilds.size.toLocaleString()}\nKullanıcılar • ${client.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString()}\n`);
+
 client.on('message', msg => {
   if (msg.content.toLowerCase() === 'sa') {
         setTimeout(() => {
